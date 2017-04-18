@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<form id="frm1" onsubmit="event.preventDefault(); handleSubmit();">
+  Message <input id="message" type="text" name="message"><br>
+  <input type="button" onclick="handleSubmit()" value="Submit">
+</form>
+<div id="answer"></div>
+
+<script>
+function handleSubmit() {
+    // get the message
+    var message = document.getElementById("message").value;
+
+    var response = "Test";
+    if (message == "Hey") {
+        response = "Hey, what's up?";
+    } else {
+        response = "yo yo yo";
+    }
+
+    // display response
+    document.getElementById("answer").innerHTML = response;
+}
+</script>
+
+</body>
+</html>
